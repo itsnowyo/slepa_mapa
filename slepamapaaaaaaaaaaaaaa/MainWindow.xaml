@@ -1,0 +1,57 @@
+﻿<Window x:Class="slepamapaaaaaaaaaaaaaa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:slepamapaaaaaaaaaaaaaa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Name="mapa"
+           Source="slepamapakraje.png"
+           MouseDown="Mapa_MouseDown"/>
+        <Canvas>
+
+            <Button Content="Praha"
+                    Width="90"
+                    Height="50"
+                    Canvas.Left="254"
+                    Canvas.Top="150"
+                    Click="City_Click"/>
+
+            <Button Content="Brno"
+                    Width="75"
+                    Height="24"
+                    Canvas.Left="461"
+                    Canvas.Top="334"
+                    Click="City_Click" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button.RenderTransform>
+                   <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="1.039"/>
+                        <TranslateTransform/>
+                   </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
+            <Button Content="Ostrava"
+                    Width="78"
+                    Height="42"
+                    Canvas.Left="608"
+                    Canvas.Top="233"
+                    Click="City_Click"/>
+
+        </Canvas>
+
+
+        <TextBlock Name="txtMesto"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Background="White"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10"/>
+
+    </Grid>
+</Window>
